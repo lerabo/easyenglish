@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		function onplayssoun(snd) {
+
+  $('audio').stop(); //Останавливаем все аудио
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = snd; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+  var audio = $('audio')[0];
+  $(document).click(function() {
+    audio.play();
+  });
+
+}
+	</script>
+	
+
+</head>
+<body>
+<audio id="audio0" src="A.mp3"></audio>
+<input type="button" value="Play" onclick="onplayssoun('A.mp3');">
+
+<audio id="audio1" src="B.mp3"></audio>
+<input type="button" value="Play" onclick="onplayssoun('B.mp3');">	
+</body>
+</html>

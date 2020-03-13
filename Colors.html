@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+    function onplayssound(snd) {
+
+  $('audio').stop(); //Останавливаем все аудио
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = snd; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+  var audio = $('audio')[0];
+  $(document).click(function() {
+    audio.play();
+  });
+
+}
+</script>
+
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+  <p class="center-img">
+  <img class="image-center" src="Images/3.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+      <audio id="audio0" src="yellow.mp3"></audio>
+      <area target="" alt="" title=" Жовтий " href="#" coords="21,6,230,199" shape="rect" onclick="onplayssound('Colors/yellow.mp3');">
+      <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Зелений " href="#" coords="273,4,482,197" shape="rect" onclick="onplayssound('Colors/green.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Синій " href="#" coords="523,5,732,198" shape="rect" onclick="onplayssound('Colors/blue.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Чевоний " href="#" coords="768,4,977,197" shape="rect" onclick="onplayssound('Colors/red.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Помаранчевий " href="#" coords="22,216,231,409" shape="rect" onclick="onplayssound('Colors/orange.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Пурпурний " href="#" coords="274,212,483,405" shape="rect" onclick="onplayssound('Colors/purple.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Коричневий " href="#" coords="520,211,729,404" shape="rect" onclick="onplayssound('Colors/brown.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Рожевий " href="#" coords="767,213,976,406" shape="rect" onclick="onplayssound('Colors/pink.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Фіолетовий " href="#" coords="24,423,233,616" shape="rect" onclick="onplayssound('Colors/violet.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Сірий " href="#" coords="270,419,479,612" shape="rect" onclick="onplayssound('Colors/grey.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Чорний " href="#" coords="520,420,729,613" shape="rect" onclick="onplayssound('Colors/black.mp3');">
+     <audio id="audio0" src="yellow.mp3"></audio>
+     <area target="" alt="" title=" Білий " href="#" coords="768,421,977,614" shape="rect" onclick="onplayssound('Colors/white.mp3');">
+      </map>
+  </div>
+</body>
+</html>

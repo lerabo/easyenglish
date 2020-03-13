@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+</script>
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+  <p class="center-img">
+  <img class="image-center" src="Images/rooms.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+      <area target="" alt="" title="Кухня" href="#" coords="0,0,246,248" shape="rect" onclick="new Audio('room/kitchen.mp3').play()">
+     <area target="" alt="" title="Вітальня" href="#" coords="250,2,496,250" shape="rect" onclick="new Audio('room/liv.mp3').play()">
+     <area target="" alt="" title="Гардероб" href="#" coords="498,2,744,250" shape="rect" onclick="new Audio('room/war.mp3').play()">
+     <area target="" alt="" title="Передпокій" href="#" coords="746,2,992,250" shape="rect" onclick="new Audio('room/hall.mp3').play()">
+     <area target="" alt="" title="Ванна кімната" href="#" coords="0,242,248,490" shape="rect" onclick="new Audio('room/bath.mp3').play()">
+     <area target="" alt="" title="Кабінет" href="#" coords="250,248,496,496" shape="rect" onclick="new Audio('room/work.mp3').play()">
+     <area target="" alt="" title="Спальня" href="#" coords="500,250,746,498" shape="rect" onclick="new Audio('room/bed.mp3').play()">
+     <area target="" alt="" title="Їдальня" href="#" coords="748,244,994,492" shape="rect" onclick="new Audio('room/din.mp3').play()">
+      </map>
+  </div>
+</body>
+</html>

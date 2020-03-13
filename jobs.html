@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+</script>
+
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+  <p class="center-img">
+  <img class="image-center" src="Images/jobs.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+      <area target="" alt="" title="Художник" href="#" coords="0,8,194,344" shape="rect" onclick="new Audio('job/artist.mp3').play()">
+     <area target="" alt="" title="Хірург" href="#" coords="214,12,406,348" shape="rect" onclick="new Audio('job/surgeon.mp3').play()">
+     <area target="" alt="" title="Медсестра" href="#" coords="404,8,596,344" shape="rect" onclick="new Audio('job/nurse.mp3').play()">
+     <area target="" alt="" title="Механік" href="#" coords="648,2,840,338" shape="rect" onclick="new Audio('job/mech.mp3').play()">
+     <area target="" alt="" title="Охоронник" href="#" coords="2,368,194,730" shape="rect" onclick="new Audio('job/body.mp3').play()">
+     <area target="" alt="" title="Репортер" href="#" coords="206,374,398,728" shape="rect" onclick="new Audio('job/reporter.mp3').play()">
+     <area target="" alt="" title="Лікар" href="#" coords="408,372,600,726" shape="rect" onclick="new Audio('job/doctor.mp3').play()">
+     <area target="" alt="" title="Фермер" href="#" coords="636,370,858,724" shape="rect" onclick="new Audio('job/farmer.mp3').play()">
+      </map>
+  </div>
+</body>
+</html>

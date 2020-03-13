@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+</script>
+
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+  <p class="center-img">
+  <img class="image-center" src="Images/hobby.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+      <area target="" alt="" title="Баскетбол" href="#" coords="26,16,216,246" shape="rect" onclick="new Audio('Plays/basketball.mp3').play()">
+     <area target="" alt="" title="Футбол" href="#" coords="288,10,478,240" shape="rect" onclick="new Audio('Plays/foot.mp3').play()">
+     <area target="" alt="" title="Волейбол" href="#" coords="538,12,728,242" shape="rect" onclick="new Audio('Plays/volley.mp3').play()">
+     <area target="" alt="" title="Теніс" href="#" coords="736,8,968,238" shape="rect" onclick="new Audio('Plays/tenis.mp3').play()">
+     <area target="" alt="" title="Бокс" href="#" coords="6,262,238,492" shape="rect" onclick="new Audio('Plays/box.mp3').play()">
+     <area target="" alt="" title="Скейтборд" href="#" coords="260,254,518,484" shape="rect" onclick="new Audio('Plays/skate.mp3').play()">
+     <area target="" alt="" title="Бейсбол" href="#" coords="522,256,742,486" shape="rect" onclick="new Audio('Plays/base.mp3').play()">
+     <area target="" alt="" title="Гольф" href="#" coords="762,258,982,488" shape="rect" onclick="new Audio('Plays/golf.mp3').play()">
+     <area target="" alt="" title="Настільний теніс" href="#" coords="388,510,608,688" shape="rect" onclick="new Audio('Plays/table.mp3').play()">
+   </map>
+  </div>
+</body>
+</html>

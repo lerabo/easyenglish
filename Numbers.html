@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+  function onplayssound(snd) {
+
+  $('audio').stop(); //Останавливаем все аудио
+  var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = snd; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+  var audio = $('audio')[0];
+  $(document).click(function() {
+    audio.play();
+  });
+}
+</script>
+
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <p class="center-img">
+  <img class="image-center" src="Images/Numbers.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+     <audio id="audio0" src="A.mp3"></audio>
+     <area target="" alt="" title=" 0 " href="#" coords="0,49,277,328" shape="rect" onclick="onplayssound('Numbers/A.mp3');">
+     <audio id="audio1" src="1.mp3"></audio>
+     <area target="" alt="" title=" 1 " href="#" coords="275,62,419,316" shape="rect" onclick="onplayssound('Numbers/1.mp3');">
+     <audio id="audio2" src="2.mp3"></audio>
+     <area target="" alt="" title=" 2 " href="#" coords="426,65,592,302" shape="rect" onclick="onplayssound('Numbers/2.mp3');">
+     <audio id="audio3" src="3.mp3"></audio>
+     <area target="" alt="" title=" 3 " href="#" coords="601,64,797,301" shape="rect" onclick="onplayssound('Numbers/3.mp3');">
+     <audio id="audio4" src="4.mp3"></audio>
+     <area target="" alt="" title=" 4 " href="#" coords="795,34,991,271" shape="rect" onclick="onplayssound('Numbers/4.mp3');">
+     <audio id="audio5" src="5.mp3"></audio>
+     <area target="" alt="" title=" 5 " href="#" coords="0,335,220,572" shape="rect" onclick="onplayssound('Numbers/5.mp3');">
+     <audio id="audio6" src="6.mp3"></audio>
+     <area target="" alt="" title=" 6 " href="#" coords="224,357,442,594" shape="rect" onclick="onplayssound('Numbers/6.mp3');">
+     <audio id="audio7" src="7.mp3"></audio>
+     <area target="" alt="" title=" 7 " href="#" coords="453,360,610,597" shape="rect" onclick="onplayssound('Numbers/7.mp3');">
+     <audio id="audio8" src="8.mp3"></audio>
+     <area target="" alt="" title=" 8 " href="#" coords="614,352,827,589" shape="rect" onclick="onplayssound('Numbers/8.mp3');">
+     <audio id="audio9" src="9.mp3"></audio>
+     <area target="" alt="" title=" 9 " href="#" coords="832,355,1002,592" shape="rect" onclick="onplayssound('Numbers/9.mp3');">
+    </map>
+ 
+</body>
+</html>

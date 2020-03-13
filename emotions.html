@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+</script>
+
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+  <p class="center-img">
+  <img class="image-center" src="Images/emotions.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+      <area target="" alt="" title="Тривожний" href="#" coords="58,56,234,298" shape="rect" onclick="new Audio('mood/an.mp3').play()">
+     <area target="" alt="" title="Розгублений" href="#" coords="242,44,400,286" shape="rect" onclick="new Audio('mood/confused.mp3').play()">
+     <area target="" alt="" title="Втомлений" href="#" coords="418,52,576,294" shape="rect" onclick="new Audio('mood/tired.mp3').play()">
+     <area target="" alt="" title="Обурливий" href="#" coords="584,56,742,298" shape="rect" onclick="new Audio('mood/cry.mp3').play()">
+     <area target="" alt="" title="Сумний" href="#" coords="770,52,928,294" shape="rect" onclick="new Audio('mood/sad.mp3').play()">
+     <area target="" alt="" title="Зляканий" href="#" coords="30,310,252,528" shape="rect" onclick="new Audio('mood/scared.mp3').play()">
+     <area target="" alt="" title="Веселий" href="#" coords="318,308,464,526" shape="rect" onclick="new Audio('mood/happy.mp3').play()">
+     <area target="" alt="" title="Допитливий" href="#" coords="588,308,734,526"shape="rect" onclick="new Audio('mood/curi.mp3').play()">
+     <area target="" alt="" title="Розлючений" href="#" coords="788,306,934,524" shape="rect" onclick="new Audio('mood/angry.mp3').play()">
+      </map>
+  </div>
+</body>
+</html>

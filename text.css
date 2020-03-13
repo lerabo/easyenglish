@@ -1,0 +1,28 @@
+<html>
+<html>
+<head>
+  <style type="text/css">
+    .text-typing
+{
+    width: 40em;
+    color:green;
+    font-size: 22px;
+    font-family: 'Marck Script', cursive;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: type 5s steps(50, end);
+    animation: type 5s steps(50, end);
+}
+@keyframes type{
+    from { width: 0; }
+}
+ 
+@-webkit-keyframes type{
+    from { width: 0; }
+}
+  </style>
+</head>
+<body>
+  
+</body>
+</html>

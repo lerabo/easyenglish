@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+</script>
+
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+  <p class="center-img">
+  <img class="image-center" src="Images/family1.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+      <area target="" alt="" title="Мама" href="#" coords="50,28,336,318" shape="rect" onclick="new Audio('family/mum.mp3').play()">
+     <area target="" alt="" title="Тато" href="#" coords="362,10,648,300" shape="rect" onclick="new Audio('family/dad.mp3').play()">
+     <area target="" alt="" title="Брат" href="#" coords="654,56,940,346" shape="rect" onclick="new Audio('family/brother.mp3').play()">
+     <area target="" alt="" title="Бабуся" href="#" coords="6,376,292,666" shape="rect" onclick="new Audio('family/grandma.mp3').play()">
+     <area target="" alt="" title="Дідусь" href="#" coords="370,374,656,664" shape="rect" onclick="new Audio('family/grandpa.mp3').play()">
+     <area target="" alt="" title="Дядько" href="#" coords="664,364,836,670" shape="rect" onclick="new Audio('family/uncle.mp3').play()">
+     <area target="" alt="" title="Тітка" href="#" coords="822,362,976,668" shape="rect" onclick="new Audio('family/ant.mp3').play()">
+      </map>
+  </div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<html>
+<head>
+	<title>Test</title>
+	<style>
+		body{
+			font-family: verdana;
+			color:#ff013d;
+		}
+		#option1, #option2, #option3, #option4{
+			display:none;
+			margin-bottom: 10px;
+		}
+		.qest{
+			text-decoration: none;
+			font-size: 20px;
+			margin-right: 20px;
+			color: #fff;
+			background: #2b0c64;
+			padding: 4px 8px;
+			border: 0;
+			cursor: pointer;
+		}
+	</style>
+	<script type="text/javascript">
+		var data_array=[
+		['Переклад слова: Pumpkin', "Помідор", "Виноград", "Гарбуз", "Буряк", 3],
+		['Переклад слова: Onion', "Огірок", "Цибуля", "Груша", "Броколі", 2],
+		['Переклад слова: Scissors', "Ручка", "Олівець", "Ножниці", "Гумка", 3],
+		['Переклад слова: Book', "Рюкзак", "Стругачка", "Термос", "Книжка", 4],
+		['Переклад слова: Cap', "Кепка", "Сумка", "Окуляри", "Шорти", 1],
+		['Переклад слова: Skirt', "Футболка", "Браслет", "Шкарпетки", "Спідниця", 4],
+		];
+
+		var plus=0;
+		var time=0;
+		var cur_answer=0;
+		var count_answer=data_array.length;
+
+		function sec(){
+			time++;
+			document.getElementById('time').innerHTML='Затрачено часу: '+time+' сек';
+		}
+		function check(num){
+			if(num==0){
+			document.getElementById('option1').style.display='block';
+			document.getElementById('option2').style.display='block';
+			document.getElementById('option3').style.display='block';
+			document.getElementById('option4').style.display='block';
+			document.getElementById('question').style.display='block';
+
+			document.getElementById('option1').innerHTML=data_array[cur_answer][1];	
+			document.getElementById('option2').innerHTML=data_array[cur_answer][2];
+			document.getElementById('option3').innerHTML=data_array[cur_answer][3];
+			document.getElementById('option4').innerHTML=data_array[cur_answer][4];
+			document.getElementById('question').innerHTML=data_array[cur_answer][0];
+
+			document.getElementById('start').style.display='none';
+			document.getElementById('end').style.display='inline';
+
+			var intervalID=setInterval(sec, 1000);
+
+			}
+			else{
+				if(num==data_array[cur_answer][5]){
+					plus++;
+					document.getElementById('result').innerHTML='Правильно!';	
+				}else{
+					document.getElementById('result').innerHTML='Ти помилився! Правильна відповідь: '+data_array[cur_answer][data_array[cur_answer][5]];
+				}
+				cur_answer++;
+				if(cur_answer<count_answer){
+				document.getElementById('option1').innerHTML=data_array[cur_answer][1];	
+			document.getElementById('option2').innerHTML=data_array[cur_answer][2];
+			document.getElementById('option3').innerHTML=data_array[cur_answer][3];
+			document.getElementById('option4').innerHTML=data_array[cur_answer][4];
+			document.getElementById('question').innerHTML=data_array[cur_answer][0];	
+		}else{
+			document.getElementById('time').id='stop';
+			document.getElementById('option1').style.display='none';
+			document.getElementById('option2').style.display='none';
+			document.getElementById('option3').style.display='none';
+			document.getElementById('option4').style.display='none';
+			document.getElementById('question').style.display='none';
+			document.getElementById('end').style.display='inline';
+
+			var percent= Math.round(plus/count_answer*100);
+
+			var res='Погано!';
+			if (percent>70)res='Добре!';
+			if (percent==100)res='Відмінно!';
+
+			document.getElementById('result').innerHTML='Правильних відповідей:'+plus+' з '+count_answer+'('+percent+ '% )<br>'+res;
+			}
+		}
+		}
+	</script>
+</head>
+<body>
+	<center>
+		<p style="font-size: 38px; font-weight: bold; padding-top: 2px;" id="time"> Затрачено часу: 0 сек</p>
+		<p style="font-size: 38px; font-weight: bold; padding-top: 2px;" id="result"></p>
+		<p style="font-size: 38px; font-weight: bold; padding-top: 2px;" id="question"></p>
+
+		<button onclick="check(1)" class="qest" id ="option1"></button>
+		<button onclick="check(2)" class="qest" id ="option2"></button>
+		<button onclick="check(3)" class="qest" id ="option3"></button>
+		<button onclick="check(4)" class="qest" id ="option4"></button>
+	</center><br>
+	<center>
+	<button id="start" class ="qest" onclick="check(0)">Почати тест</button>
+	<script>
+		var curent_url=document.URL; document.write("<a id='end' style='display:none;' class ='qest' href=' "+curent_url + " '>Почати знову</a>");	</script>
+	</center>
+	</body>
+</html>

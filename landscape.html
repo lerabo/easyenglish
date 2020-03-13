@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+</script>
+
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+  <p class="center-img">
+  <img class="image-center" src="Images/landscape.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+      <area target="" alt="" title="Грунт" href="#" coords="10,31,343,208" shape="rect" onclick="new Audio('nature/soil.mp3').play()">
+     <area target="" alt="" title="Квітка" href="#" coords="325,6,436,163" shape="rect" onclick="new Audio('nature/flower.mp3').play()">
+     <area target="" alt="" title="Листок" href="#" coords="563,12,674,143" shape="rect" onclick="new Audio('nature/leaf.mp3').play()">
+     <area target="" alt="" title="Камінь" href="#" coords="687,104,953,289" shape="rect" onclick="new Audio('nature/stone.mp3').play()">
+     <area target="" alt="" title="Колода" href="#" coords="1,204,226,358" shape="rect" onclick="new Audio('nature/log.mp3').play()">
+     <area target="" alt="" title="Трава" href="#" coords="245,198,364,348" shape="rect" onclick="new Audio('nature/grass.mp3').play()">
+     <area target="" alt="" title="Дерево" href="#" coords="396,112,670,512" shape="rect" onclick="new Audio('nature/tree.mp3').play()">
+     <area target="" alt="" title="Пеньок" href="#" coords="74,342,312,512" shape="rect" onclick="new Audio('nature/tree stump.mp3').play()">
+     <area target="" alt="" title="Рослина" href="#" coords="314,372,426,508" shape="rect" onclick="new Audio('nature/plant.mp3').play()">
+     <area target="" alt="" title="Пісок" href="#" coords="692,312,994,498" shape="rect" onclick="new Audio('nature/sand.mp3').play()">
+      </map>
+  </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/maphilight/1.4.0/jquery.maphilight.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('.map').maphilight();
+  });
+</script>
+
+<head>
+  <link href ="style3.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <div>
+  <p class="center-img">
+  <img class="image-center" src="Images/school_tools.jpg"  usemap="#image-map"  class="map" >
+</p>
+    <map name="image-map">
+      <area target="" alt="" title="Олівець" href="#" coords="24,4,246,190" shape="rect" onclick="new Audio('tools/pencil.mp3').play()">
+     <area target="" alt="" title="Лінійка" href="#" coords="256,4,504,170" shape="rect" onclick="new Audio('tools/ruler.mp3').play()">
+     <area target="" alt="" title="Гумка" href="#" coords="528,2,704,168" shape="rect" onclick="new Audio('tools/eraser.mp3').play()">
+     <area target="" alt="" title="Кольорові олівці" href="#" coords="20,202,286,368" shape="rect" onclick="new Audio('tools/color.mp3').play()">
+     <area target="" alt="" title="Ножниці" href="#" coords="288,182,492,418" shape="rect" onclick="new Audio('tools/scissors.mp3').play()">
+     <area target="" alt="" title="Книжка" href="#" coords="492,170,696,406" shape="rect" onclick="new Audio('tools/book.mp3').play()">
+     <area target="" alt="" title="Рюкзак" href="#" coords="10,390,290,698" shape="rect" onclick="new Audio('tools/bag.mp3').play()">
+     <area target="" alt="" title="Стругачка" href="#" coords="290,448,500,684" shape="rect" onclick="new Audio('tools/sharpener.mp3').play()">
+     <area target="" alt="" title="Термос" href="#" coords="486,422,710,686" shape="rect" onclick="new Audio('tools/thermos.mp3').play()">
+    </map>
+  </div>
+</body>
+</html
